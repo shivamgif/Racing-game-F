@@ -61,12 +61,11 @@
     <Compile Include="Assets\Scripts\StateManager.cs" />
     <Compile Include="Assets\CircleDraw.cs" />
     <Compile Include="Assets\PointsScore.cs" />
-    <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\TurnAround.cs" />
     <Compile Include="Assets\Points.cs" />
     <Compile Include="Assets\LineSegments.cs" />
     <Compile Include="Assets\FollowingPlayer.cs" />
-    <Compile Include="Assets\WayPoints.cs" />
+    <Compile Include="Assets\Obstacle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

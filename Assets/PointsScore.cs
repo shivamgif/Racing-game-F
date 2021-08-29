@@ -7,14 +7,23 @@ public class PointsScore : MonoBehaviour
 {
     public Text txt;
 
-    private int minPoints = 1;
+    private float minPoints = 1;
     private int maxPoints = 100;
 
-    private static int points = 0;
+    private static float points = 0;
 
     float elapsed = 0;
 
+    private float pointsLengthOfLine;
+    public LineChangeColor lineChangeColor;
 
+    public CarController carController;
+
+    public void Update()
+    {
+        minPoints = (maxPoints / lineChangeColor.LengthOfLine())* carController.currentSpeed;
+       
+    }
 
     public void IncreaseScore()
     {
@@ -26,26 +35,33 @@ public class PointsScore : MonoBehaviour
            
         }
 
-        if (points < 100) 
-            points ++;
+        if (points < maxPoints) 
+          points += minPoints;
+         
           Debug.Log(points);
-          txt.text = "Points:" + points;
+          txt.text = "Points:" + Mathf.RoundToInt(points);
         
     }
 
     public void DecreaseScore()
     {
-        points--;
+        points -=minPoints ;
         Debug.Log(" Losing" + points);
-        txt.text = "Points:" + points;
+        txt.text = "Points:" + Mathf.RoundToInt(points);
         if (points <= minPoints)
         {
-            points = minPoints-1;
-            txt.text = "Points:" + points;
+            points = 0;
+            txt.text = "Points:" + Mathf.RoundToInt(points);
             Debug.Log("Game Over");
         }
         
        
+    }
+
+    public void DecreaseObstaclePoints()
+    {
+        points -= 1;
+        txt.text = "Points:" + points;
     }
 
 }
