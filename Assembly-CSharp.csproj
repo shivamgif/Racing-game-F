@@ -57,15 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CarController.cs" />
-    <Compile Include="Assets\LineChangeColor.cs" />
+    <Compile Include="Assets\Scripts\LineChangeColor.cs" />
     <Compile Include="Assets\Scripts\StateManager.cs" />
-    <Compile Include="Assets\CircleDraw.cs" />
-    <Compile Include="Assets\PointsScore.cs" />
-    <Compile Include="Assets\TurnAround.cs" />
-    <Compile Include="Assets\Points.cs" />
-    <Compile Include="Assets\LineSegments.cs" />
-    <Compile Include="Assets\FollowingPlayer.cs" />
-    <Compile Include="Assets\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\CircleDraw.cs" />
+    <Compile Include="Assets\Scripts\PointsScore.cs" />
+    <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\TurnAround.cs" />
+    <Compile Include="Assets\Scripts\Points.cs" />
+    <Compile Include="Assets\Scripts\LineSegments.cs" />
+    <Compile Include="Assets\Scripts\FollowingPlayer.cs" />
+    <Compile Include="Assets\Scripts\GamerName.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

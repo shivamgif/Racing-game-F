@@ -36,7 +36,9 @@ public class CarController : MonoBehaviour
     [SerializeField] private float maxSteeringAngle = 110f;
     [SerializeField] private float minSteeringAngle = 40f;
 
-    private Vector3 lastPosition; 
+    private Vector3 lastPosition;
+
+    public Text speedTxt;
     public void Awake()
     {
         if(StateManager.Color1== true)
@@ -114,6 +116,8 @@ public class CarController : MonoBehaviour
         }
 
         lastPosition = transform.position;
+
+        speedTxt.text = "Speed:" + speed.ToString();
     }
 
     private float HandleSteering()
